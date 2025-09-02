@@ -1,11 +1,11 @@
 
 from pymongo import MongoClient
 
-# Replace with your MongoDB connection string
+
 client = MongoClient('mongodb://localhost:27017/')
 
-db = client.todo_db  # Create or connect to a database named "todo_db"
-tasks_collection = db.tasks  # Create or connect to a collection named "tasks"
+db = client.todo_db  
+tasks_collection = db.tasks  
 
 def create_task(description):
     task = {
@@ -35,4 +35,5 @@ while True:
         elif choice == '3':
             break
         else:
+
             print("Invalid choice. Please try again.")
